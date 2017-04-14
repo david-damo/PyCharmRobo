@@ -15,7 +15,7 @@ Open Browser To Login Page
     Set Selenium Speed  ${delay}
     #click element  ${LoginLink}
     input text  ${superUserId}    sanjeev.jha77@gmail.com
-    input text  ${superUserPass}  Jpmc@123
+    input text  ${superUserPass}  XXXX
     Set Selenium Speed  ${delay}
     click element  ${Login}
 

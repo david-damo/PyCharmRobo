@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170413 09:26:37.055" generator="Robot 3.0 (Python 2.7.10 on win32)">
+<suite source="C:\Sanjeev\MobileAutomation\TestSuite" id="s1" name="TestSuite">
+<suite source="C:\Sanjeev\MobileAutomation\TestSuite\Tests" id="s1-s1" name="Tests">
+<suite source="C:\Sanjeev\MobileAutomation\TestSuite\Tests\example.robot" id="s1-s1-s1" name="Example">
+<test id="s1-s1-s1-t1" name="Valid Login">
+<kw name="Open Browser To Login Page">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${server}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170413 09:26:37.302" level="INFO">Opening browser 'Firefox' to base url 'http://www.ebay.in/'</msg>
+<status status="PASS" endtime="20170413 09:26:45.874" starttime="20170413 09:26:37.302"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170413 09:26:46.858" starttime="20170413 09:26:45.874"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${delay}</arg>
+</arguments>
+<status status="PASS" endtime="20170413 09:26:46.860" starttime="20170413 09:26:46.859"></status>
+</kw>
+<status status="PASS" endtime="20170413 09:26:46.860" starttime="20170413 09:26:37.302"></status>
+</kw>
+<status status="PASS" endtime="20170413 09:26:46.861" critical="yes" starttime="20170413 09:26:37.302"></status>
+</test>
+<doc>This is a simple test with Robot Framework</doc>
+<status status="PASS" endtime="20170413 09:26:46.861" starttime="20170413 09:26:37.101"></status>
+</suite>
+<suite source="C:\Sanjeev\MobileAutomation\TestSuite\Tests\LoginPage.robot" id="s1-s1-s2" name="LoginPage">
+<test id="s1-s1-s2-t1" name="InValid LoginNoCredential">
+<kw name="Open Browser To Login NoInput">
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${delay}</arg>
+</arguments>
+<status status="PASS" endtime="20170413 09:26:47.013" starttime="20170413 09:26:47.013"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LoginLink}</arg>
+</arguments>
+<msg timestamp="20170413 09:26:47.014" level="INFO">Clicking element '//a[text()='Sign in']'.</msg>
+<status status="PASS" endtime="20170413 09:26:47.205" starttime="20170413 09:26:47.014"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${delay}</arg>
+</arguments>
+<status status="PASS" endtime="20170413 09:26:47.206" starttime="20170413 09:26:47.205"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Login}</arg>
+</arguments>
+<msg timestamp="20170413 09:26:47.206" level="INFO">Clicking element '//input[@id='sgnBt']'.</msg>
+<status status="PASS" endtime="20170413 09:26:53.613" starttime="20170413 09:26:47.206"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Oops, that's not a match.</arg>
+</arguments>
+<msg timestamp="20170413 09:26:53.663" level="INFO">Current page contains text 'Oops, that's not a match.'.</msg>
+<status status="PASS" endtime="20170413 09:26:53.664" starttime="20170413 09:26:53.613"></status>
+</kw>
+<status status="PASS" endtime="20170413 09:26:53.664" starttime="20170413 09:26:47.013"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="Screenshot">
+<doc>Sets the directory where screenshots are saved.</doc>
+<arguments>
+<arg>C:\\Amy\\</arg>
+</arguments>
+<status status="PASS" endtime="20170413 09:26:53.666" starttime="20170413 09:26:53.664"></status>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<arguments>
+<arg>LoginNoCredential.jpg</arg>
+</arguments>
+<msg timestamp="20170413 09:26:53.738" html="yes" level="INFO">&lt;a href="../../Amy/LoginNoCredential.jpg"&gt;&lt;img src="../../Amy/LoginNoCredential.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170413 09:26:53.738" starttime="20170413 09:26:53.666"></status>
+</kw>
+<status status="PASS" endtime="20170413 09:26:53.738" critical="yes" starttime="20170413 09:26:47.012"></status>
+</test>
+<test id="s1-s1-s2-t2" name="Valid Login">
+<kw name="Open Browser To Login Page">
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${delay}</arg>
+</arguments>
+<status status="PASS" endtime="20170413 09:26:53.742" starttime="20170413 09:26:53.741"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${superUserId}</arg>
+<arg>sanjeev.jha77@gmail.com</arg>
+</arguments>
+<msg timestamp="20170413 09:26:53.743" level="INFO">Typing text 'sanjeev.jha77@gmail.com' into text field '//input[@placeholder='Email or username' and @type='text']'</msg>
+<status status="PASS" endtime="20170413 09:26:53.894" starttime="20170413 09:26:53.742"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${superUserPass}</arg>
+<arg>Jpmc@123</arg>
+</arguments>
+<msg timestamp="20170413 09:26:53.894" level="INFO">Typing text 'Jpmc@123' into text field '//input[@placeholder='Password' and @type='password']'</msg>
+<status status="PASS" endtime="20170413 09:26:53.985" starttime="20170413 09:26:53.894"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${delay}</arg>
+</arguments>
+<status status="PASS" endtime="20170413 09:26:53.986" starttime="20170413 09:26:53.985"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Login}</arg>
+</arguments>
+<msg timestamp="20170413 09:26:53.986" level="INFO">Clicking element '//input[@id='sgnBt']'.</msg>
+<status status="PASS" endtime="20170413 09:26:56.654" starttime="20170413 09:26:53.986"></status>
+</kw>
+<status status="PASS" endtime="20170413 09:26:56.654" starttime="20170413 09:26:53.741"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170413 09:26:57.510" starttime="20170413 09:26:56.655"></status>
+</kw>
+<status status="PASS" endtime="20170413 09:26:57.510" critical="yes" starttime="20170413 09:26:53.739"></status>
+</test>
+<doc>This is a simple test with Robot Framework</doc>
+<status status="PASS" endtime="20170413 09:26:57.512" starttime="20170413 09:26:46.863"></status>
+</suite>
+<status status="PASS" endtime="20170413 09:26:57.515" starttime="20170413 09:26:37.101"></status>
+</suite>
+<status status="PASS" endtime="20170413 09:26:57.518" starttime="20170413 09:26:37.070"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TestSuite" pass="3">TestSuite</stat>
+<stat fail="0" id="s1-s1" name="Tests" pass="3">TestSuite.Tests</stat>
+<stat fail="0" id="s1-s1-s1" name="Example" pass="1">TestSuite.Tests.Example</stat>
+<stat fail="0" id="s1-s1-s2" name="LoginPage" pass="2">TestSuite.Tests.LoginPage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
