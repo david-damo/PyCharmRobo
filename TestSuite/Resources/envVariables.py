@@ -1,3 +1,4 @@
-server = "http://www.ebay.in/"
+server = "https://www.airtel.in/"
 browser = "Firefox"
-delay = "0"
+delay = "1"
+username="9108459793"

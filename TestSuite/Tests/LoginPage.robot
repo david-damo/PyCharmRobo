@@ -14,8 +14,8 @@ Open Browser To Login Page
     #Maximize Browser Window
     Set Selenium Speed  ${delay}
     #click element  ${LoginLink}
-    input text  ${superUserId}    sanjeev.jha77@gmail.com
-    input text  ${superUserPass}  XXXX
+    input text  ${superUserId}    ${username}
+    input text  ${superUserPass}  XXXXX
     Set Selenium Speed  ${delay}
     click element  ${Login}
 
@@ -24,16 +24,21 @@ Open Browser To Login NoInput
     #Maximize Browser Window
     Set Selenium Speed  ${delay}
     click element  ${LoginLink}
-    Set Selenium Speed  ${delay}
     click element  ${Login}
-    #Page Should Contain "Oops, that's not a match."
-    Page Should Contain  Oops, that's not a match.
+    Set Selenium Speed  ${delay}
+    Screenshot.set screenshot directory  C:\\Amy\\
+    TAKE SCREENSHOT  LoginNoCredential.jpg
+    Page Should Contain  These fields are required to continue.
+Go To Manage UserProfile
+    Set Selenium Speed  ${delay}
+    click element  ${UserProfile}
 
 *** Test Cases ***
 InValid LoginNoCredential
     Open Browser To Login NoInput
-    Screenshot.set screenshot directory  C:\\Amy\\
-    TAKE SCREENSHOT  LoginNoCredential.jpg
 Valid Login
     Open Browser To Login Page
-    [Teardown]    Close Browser
+    #[Teardown]    Close Browser
+User Profile
+     Go To Manage UserProfile
+    #[Teardown]    Close Browser
